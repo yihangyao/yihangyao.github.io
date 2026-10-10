@@ -54,6 +54,57 @@
             display: block;
             margin-bottom: 1em;
         }
+        .topic-tags {
+            margin: 5px 0 10px;
+            line-height: 1.8;
+        }
+        .topic-tag {
+            display: inline-block;
+            margin-right: 6px;
+            padding: 2px 10px;
+            border: 1px solid #b8d4ee;
+            border-radius: 999px;
+            background: #edf6ff;
+            color: #2f5f8f;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 20px;
+        }
+        .result-highlight {
+            color: #174a7e;
+            font-weight: 700;
+        }
+        .contribution-note {
+            color: #777777;
+            font-size: 0.75em;
+            font-weight: 400;
+        }
+        .project-organization {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin: 0 0 5px;
+            color: #555555;
+            font-size: 13px;
+            line-height: 20px;
+        }
+        .organization-logo {
+            display: block;
+            width: auto;
+            height: 18px;
+        }
+        .organization-logo.ibm-logo {
+            height: 14px;
+        }
+        .bio-text {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        p[style="line-height:20px;font-size:14px;color: #777777"] {
+            text-align: justify;
+            text-justify: inter-word;
+        }
     </style>
 </head>
 
@@ -103,20 +154,21 @@
 				<!-- <p style="padding-top: 0px"><tt>yihangya[at]andrew.cmu.edu</tt></p>
 
 				<p> -->
+				<p class="bio-text">
 					Hi, welcome to my website! I am a final-year Ph.D. candidate in the <a target="_blank" href="https://safeai-lab.github.io/">Safe AI Lab</a> at Carnegie Mellon University, advised by Prof. Ding Zhao. I am also a research intern at <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/foundation-models/nemotron/">NVIDIA Nemotron</a>. I received my Bachelor's degree from Shanghai Jiao Tong University in 2022 and spent a wonderful time as a visiting student in the <a target="_blank" href="http://icontrol.ri.cmu.edu/">Intelligent Control Lab</a> at CMU, working with Prof. Changliu Liu. I previously interned at <a target="_blank" href="https://www.salesforce.com/ai-research/">Salesforce AI Research,</a> <a target="_blank" href="https://mitibmwatsonailab.mit.edu/">MIT-IBM Watson AI Lab, IBM Research</a> and have also been collaborating with <a target="_blank" href="https://deepmind.google/models/gemini-robotics/">Google DeepMind Robotics</a> since 2023.
 					
 				
 					
 				</p>
 
-				<p>
+				<p class="bio-text">
 
 				My research focuses on reinforcement learning and large language models, with a current emphasis on <strong>self-evolving agents</strong> and <strong>RL environment scaling</strong> for real-world applications such as terminal/coding agents [<a href="https://terminal-river.github.io/" target="_blank">Technical Report 2026</a>]. My prior research experience also includes:
 
 				</p>
 
 				<ul style="margin-top: 6px;">
-					<li>Agentic RL for Proactive User-Centric LLM Agents [<a href="https://proactive-agentic-rl.github.io/" target="_blank">ICML 2026</a>]</li>
+					<li>Agentic RL for Interactive, User-Centric LLM Agents [<a href="https://proactive-agentic-rl.github.io/" target="_blank">ICML 2026</a>]</li>
 					<li>RL Foundations for LLM Post-Training [<a href="https://arxiv.org/pdf/2511.12429" target="_blank">ACL 2026</a>, <a href="https://bridge-llm-reasoning.github.io/" target="_blank">NeurIPS 2025</a>]</li>
 					<li>AI/LLM Safety and Robustness [<a href="https://sites.google.com/view/saferl-oasis" target="_blank">NeurIPS 2024</a>, <a href="https://arxiv.org/pdf/2310.03718" target="_blank">NeurIPS 2023</a>, <a href="https://sites.google.com/view/mc-grads/home" target="_blank">L4DC 2024</a>, <a href="https://arxiv.org/pdf/2502.17800" target="_blank">ACL 2025</a>]</li>
 				</ul>
@@ -204,17 +256,13 @@
 	<div class="container">
 		<h5 id="Publications" style="padding-top: 75px; margin-top: -75px;">  <!-- style="margin-bottom: 0.1em" -->
 			<!-- Publications <small><small>&nbsp;<a target="_blank" href="https://scholar.google.com/citations?user=0_bSbIoAAAAJ&hl=en">[Full List]</a></small></small> -->
-			Selected Publications / Preprints
+			Selected Works <span class="contribution-note">(* indicates equal contribution)</span>
 			<!-- <small>&nbsp; (
 				<a href="" id="select0" onclick="showPubs(0); return false;">show selected</a> /
 				<a href="" id="select1" onclick="showPubs(1); return false;">show by date</a>
 				)
 			</small> -->
 		</h5>
-		<div>
-			<small><span class="author">(* indicates equal contribution)</span></small>
-		</div>
-
 		<div class="row">
 			<div id="RIVER" class="col-md-3">
 				<a>
@@ -223,20 +271,27 @@
 			</div>
 			<div class="col-md-9" style="padding-top:30px">
 				<h5><font color="#000000"><div style="line-height:20px; font-size:18px;">Learning Generalizable Behaviors for Terminal Agents</div></font></h5>
-				<p style="line-height:20px;font-size:14px;">
+				<p style="line-height:20px;font-size:14px;margin-bottom:4px;">
 					<span style="color: #000000"><strong>Yihang Yao</strong></span>,
 					Bo Pang, Xuan Phi Nguyen, Ding Zhao, Shafiq Joty, Semih Yavuz
 				</p>
-				<p style="line-height:10px;font-size:14px;color: #000000">
-					Preprint, 2026
-				</p>
-				<p style="line-height:20px;font-size:14px;color: #777777">
-					TL;DR: We propose the agentic compositional generalization hypothesis, which posits that terminal-agent RL generalizes by shaping reusable behaviors that compose existing atomic skills. Using RL environments with high-quality verifiers to shape these behaviors, our training recipe achieves 106% and 30% larger average RL performance gains on Terminal-Bench-Lite and Terminal-Bench-v2.1, respectively, across models ranging from 2B to 27B parameters, while using fewer than 30% of the environments in the TMax collection.
-				</p>
-				<p style="line-height:10px;font-size:14px;color: #777777">
+				<p style="line-height:20px;font-size:14px;color: #000000;margin-bottom:6px;">
+					Technical Report, 2026 &nbsp;&middot;&nbsp;
 					<a href="https://arxiv.org/abs/2608.22631" target="_blank">Paper</a> /
-					<a href="https://terminal-river.github.io/" target="_blank">Website</a> / 
+					<a href="https://terminal-river.github.io/" target="_blank">Website</a> /
 					<a href="https://self-evolving-agents.salesforceresearch.ai/papers/river/index.html" target="_blank">Salesforce Blog</a>
+				</p>
+				<p class="project-organization">
+					<span>Collaboration with Salesforce AI Research</span>
+					<img class="organization-logo" src="./static/organization/salesforce_logo.png" alt="Salesforce">
+				</p>
+				<div class="topic-tags" aria-label="Research topics">
+					<span class="topic-tag">Coding Agents</span>
+					<span class="topic-tag">Agentic RL</span>
+					<span class="topic-tag">RL Environments</span>
+				</div>
+				<p style="line-height:20px;font-size:14px;color: #777777">
+					TL;DR: We propose the agentic compositional generalization hypothesis, which posits that terminal-agent RL generalizes by shaping reusable behaviors that compose existing atomic skills. Using RL environments with high-quality verifiers to shape these behaviors, our training recipe achieves <span class="result-highlight">106% and 30% larger average RL performance gains</span> on Terminal-Bench-Lite and Terminal-Bench-v2.1, respectively, across models ranging from 2B to 27B parameters, while using fewer than 30% of the environments in the TMax collection.
 				</p>
 			</div>
 		</div>
@@ -249,22 +304,28 @@
 			</div>
 			<div class="col-md-9" style="padding-top:30px">  
 				<h5><font color="#000000"><div style="line-height:20px; font-size:18px;">Pushing Forward Pareto Frontiers of Proactive Agents with Behavioral Agentic Optimization</div></font></h5>
-				<p style="line-height:20px;font-size:14px;">
+				<p style="line-height:20px;font-size:14px;margin-bottom:4px;">
 					<span style="color: #000000"><strong>Yihang Yao</strong></span>,  
 					Zhepeng Cen, Haohong Lin, Shiqi Liu, Zuxin Liu, Jiacheng Zhu, Zhang-Wei Hong, Laixi Shi, Ding Zhao
-				</p> 
-				<p style="line-height:10px;font-size:14px;color: #000000">
-					ICML 2026
-				</p> 
-				<p style="line-height:20px;font-size:14px;color: #777777">
-					TL;DR: In this work, we identified the Pareto frontier between task performance and user engagement in proactive agent training, and proposed an agentic RL framework, Behavioral Agentic Optimization (BAO), to push forward this frontier by optimizing the behavioral space of proactive agents with reduced reward hacking.
-				<p style="line-height:10px;font-size:14px;color: #777777">
+				</p>
+				<p style="line-height:20px;font-size:14px;color: #000000;margin-bottom:6px;">
+					ICML 2026 &nbsp;&middot;&nbsp;
 					<a href="http://arxiv.org/abs/2602.11351" target="_blank">Paper</a> /
 					<a href="https://proactive-agentic-rl.github.io/" target="_blank">Website</a> /
-					<a href="https://github.com/yihangyao/BAO" target="_blank">Code</a> 
-				</p> 
-
-				
+					<a href="https://github.com/yihangyao/BAO" target="_blank">Code</a>
+				</p>
+				<p class="project-organization">
+					<span>Collaboration with Salesforce AI Research</span>
+					<img class="organization-logo" src="./static/organization/salesforce_logo.png" alt="Salesforce">
+				</p>
+				<div class="topic-tags" aria-label="Research topics">
+					<span class="topic-tag">Agentic RL</span>
+					<span class="topic-tag">User Simulation</span>
+					<span class="topic-tag">Interactive Agents</span>
+				</div>
+				<p style="line-height:20px;font-size:14px;color: #777777">
+					TL;DR: How can we better balance user burden and task performance in multi-turn interactive tasks? We introduce Behavioral Agentic Optimization (BAO), an <span class="result-highlight">agentic RL</span> pipeline that combines <span class="result-highlight">simulated-user training with turn-wise reward regularization</span>. On UserRL tasks, BAO achieves state-of-the-art performance while requiring less user intervention than the evaluated RL baselines.
+				</p>
 			</div>
 		</div>
 
@@ -276,19 +337,27 @@
 			</div>
 			<div class="col-md-9" style="padding-top:30px">  
 				<h5><font color="#000000"><div style="line-height:20px; font-size:18px;">Tailored Primitive Initialization is the Secret Key to Reinforcement Learning</div></font></h5>
-				<p style="line-height:20px;font-size:14px;">
+				<p style="line-height:20px;font-size:14px;margin-bottom:4px;">
 					<span style="color: #000000"><strong>Yihang Yao</strong></span>,  
 					Guangtao Zeng, Raina Wu, Yang Zhang, Ding Zhao, Zhang-Wei Hong, Chuang Gan
-				</p> 
-				<p style="line-height:10px;font-size:14px;color: #000000">
-					ACL 2026 Main
-				</p> 
-				<p style="line-height:20px;font-size:14px;color: #777777">
-					TL;DR: Tailor is a mid-training data pipeline that automatically discovers and curates diverse, high-quality reasoning primitives to warm-start LLMs, leading to more stable and sample-efficient RL with higher downstream performance.
-				<p style="line-height:10px;font-size:14px;color: #777777">
+				</p>
+				<p style="line-height:20px;font-size:14px;color: #000000;margin-bottom:6px;">
+					ACL 2026 Main &nbsp;&middot;&nbsp;
 					<a href="https://arxiv.org/pdf/2511.12429" target="_blank">Paper</a>
-				</p> 
-				
+				</p>
+				<p class="project-organization">
+					<span>Collaboration with MIT-IBM Watson AI Lab, IBM Research</span>
+					<img class="organization-logo ibm-logo" src="./static/organization/IBM-Logo-PNG-Photo.png" alt="IBM">
+				</p>
+				<div class="topic-tags" aria-label="Research topics">
+					<span class="topic-tag">LLM Reasoning</span>
+					<span class="topic-tag">RL Foundations</span>
+					<span class="topic-tag">Learning Dynamics</span>
+					<span class="topic-tag">Recursive Data Pipeline</span>
+				</div>
+				<p style="line-height:20px;font-size:14px;color: #777777">
+					TL;DR: How can we improve RL efficiency and final performance? We introduce Tailor, an automated SFT data-curation pipeline that <span class="result-highlight">warm-starts RL with diverse reasoning primitives, including skills and reasoning patterns</span>. This initialization broadens exploration during RL, improves sample efficiency, and raises the final performance ceiling.
+				</p>
 			</div>
 		</div>
 
@@ -300,22 +369,29 @@
 			</div>
 			<div class="col-md-9" style="padding-top:30px">  
 				<h5><font color="#000000"><div style="line-height:20px; font-size:18px;">Behavior Injection: Preparing Language Models for Reinforcement Learning</div></font></h5>
-				<p style="line-height:20px;font-size:14px;">
+				<p style="line-height:20px;font-size:14px;margin-bottom:4px;">
 					Zhepeng Cen*, <span style="color: #000000"><strong>Yihang Yao</strong></span>*,  
 					William Han, 
 					Zuxin Liu, Ding Zhao
-				</p> 
-				<p style="line-height:10px;font-size:14px;color: #000000">
-					NeurIPS 2025 
-				</p> 
-				<p style="line-height:20px;font-size:14px;color: #777777">
-					TL;DR: This paper proposes behavior injection, a mid-training approach that augments demonstration data with exploratory and exploitative behaviors to improve RL data co-influence and sampling efficiency.
-				<p style="line-height:10px;font-size:14px;color: #777777">
+				</p>
+				<p style="line-height:20px;font-size:14px;color: #000000;margin-bottom:6px;">
+					NeurIPS 2025 &nbsp;&middot;&nbsp;
 					<a href="https://arxiv.org/abs/2505.18917" target="_blank">Paper</a> /
 					<a href="https://bridge-llm-reasoning.github.io/" target="_blank">Website</a> /
-					<a href="https://github.com/czp16/Bridge-LLM-reasoning" target="_blank">Code</a> 
-				</p> 
-				
+					<a href="https://github.com/czp16/Bridge-LLM-reasoning" target="_blank">Code</a>
+				</p>
+				<p class="project-organization">
+					<span>Collaboration with Salesforce AI Research</span>
+					<img class="organization-logo" src="./static/organization/salesforce_logo.png" alt="Salesforce">
+				</p>
+				<div class="topic-tags" aria-label="Research topics">
+					<span class="topic-tag">LLM Reasoning</span>
+					<span class="topic-tag">RL Foundations</span>
+					<span class="topic-tag">Learning Dynamics</span>
+				</div>
+				<p style="line-height:20px;font-size:14px;color: #777777">
+					TL;DR: Why do LLMs respond differently to RL and exhibit varying data efficiency? We explain these differences through <span class="result-highlight">data co-influence</span> effects and identify reasoning patterns as an important factor in RL efficiency. We also introduce a <span class="result-highlight">structured data pipeline</span> that prepares LLMs for RL by injecting <span class="result-highlight">exploratory and exploitative behaviors</span> into their reasoning traces.
+				</p>
 			</div>
 		</div>
 
@@ -327,18 +403,25 @@
 			</div>
 			<div class="col-md-9" style="padding-top:30px">  
 				<h5><font color="#000000"><div style="line-height:20px; font-size:18px;">Your Language Model May Think Too Rigidly: Achieving Reasoning Consistency with Symmetry-Enhanced Training</div></font></h5>
-				<p style="line-height:20px;font-size:14px;">
+				<p style="line-height:20px;font-size:14px;margin-bottom:4px;">
 					<span style="color: #000000"><strong>Yihang Yao</strong></span>, Zhepeng Cen, Miao Li,
 					William Han, Yuyou Zhang, Emerson Liu, 
 					Zuxin Liu, Chuang Gan, Ding Zhao
-				</p> 
-				<p style="line-height:10px;font-size:14px;color: #000000">
-					ACL 2025 Findings
-				</p> 
+				</p>
+				<p style="line-height:20px;font-size:14px;color: #000000;margin-bottom:6px;">
+					ACL 2025 Findings &nbsp;&middot;&nbsp;
+					<a href="https://arxiv.org/abs/2502.17800" target="_blank">Paper</a>
+				</p>
+				<p class="project-organization">
+					<span>Collaboration with Salesforce AI Research</span>
+					<img class="organization-logo" src="./static/organization/salesforce_logo.png" alt="Salesforce">
+				</p>
+				<div class="topic-tags" aria-label="Research topics">
+					<span class="topic-tag">LLM Reasoning</span>
+					<span class="topic-tag">Robustness</span>
+				</div>
 				<p style="line-height:20px;font-size:14px;color: #777777">
 					TL;DR: MEND enhances LLM robustness by improving query symmetry awareness, boosting reasoning performance through structured dataset curation.
-				<p style="line-height:10px;font-size:14px;color: #777777">
-					<a href="https://arxiv.org/abs/2502.17800" target="_blank">Paper</a> 
 				</p>
 			</div>
 		</div>
@@ -351,26 +434,33 @@
 			</div>
 			<div class="col-md-9" style="padding-top:30px">  
 				<h5><font color="#000000"><div style="line-height:20px; font-size:18px;">OASIS: Conditional Distribution Shaping for Offline Safe Reinforcement Learning</div></font></h5>
-				<p style="line-height:20px;font-size:14px;">
+				<p style="line-height:20px;font-size:14px;margin-bottom:4px;">
 					<span style="color: #000000"><strong>Yihang Yao</strong></span>*, Zhepeng Cen*,
 					Wenhao Ding, Haohong Lin, Shiqi Liu,
 					Tingnan Zhang, Wenhao Yu, Ding Zhao
-				</p> 
-				<p style="line-height:10px;font-size:14px;color: #000000">
-					NeurIPS 2024
-				</p> 
-				<p style="line-height:20px;font-size:14px;color: #777777">
-					TL;DR: We investigate offline RL from a data-centric perspective and propose a diffusion model-based data generator to curate training datasets aligned with user preferences.
-				</p> 
-				<p style="line-height:10px;font-size:14px;color: #777777">
-					<a href="https://openreview.net/forum?id=3uDEmsf3Jf" target="_blank">Paper</a> / 
+				</p>
+				<p style="line-height:20px;font-size:14px;color: #000000;margin-bottom:6px;">
+					NeurIPS 2024 &nbsp;&middot;&nbsp;
+					<a href="https://openreview.net/forum?id=3uDEmsf3Jf" target="_blank">Paper</a> /
 					<a href="https://sites.google.com/view/saferl-oasis" target="_blank">Website</a> /
 					<a href="https://github.com/yihangyao/OASIS" target="_blank">Code</a>
+				</p>
+				<p class="project-organization">
+					<span>Collaboration with Google DeepMind</span>
+					<img class="organization-logo" src="./static/organization/GDM_logo.png" alt="Google DeepMind">
+				</p>
+				<div class="topic-tags" aria-label="Research topics">
+					<span class="topic-tag">Reinforcement Learning</span>
+					<span class="topic-tag">Data-centric ML</span>
+					<span class="topic-tag">AI Safety</span>
+				</div>
+				<p style="line-height:20px;font-size:14px;color: #777777">
+					TL;DR: We investigate offline RL from a data-centric perspective and propose a diffusion model-based data generator to curate training datasets aligned with user preferences.
 				</p>
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row" hidden>
 			<div id="FCSRL" class="col-md-3">
 				<a>
 					<img class="img-responsive" src="./static/publication/fcsrl.png" width="220px" height="160px" style="padding-top:20px; padding-left:40px">
@@ -404,20 +494,27 @@
 			</div>
 			<div class="col-md-9" style="padding-top:30px">  
 				<h5><font color="#000000"><div style="line-height:20px; font-size:18px;">Gradient Shaping for Multi-Constraint Safe Reinforcement Learning</div></font></h5>
-				<p style="line-height:20px;font-size:14px;">
+				<p style="line-height:20px;font-size:14px;margin-bottom:4px;">
 					<span style="color: #000000"><strong>Yihang Yao</strong></span>, 
 					Zuxin Liu, Zhepeng Cen, Peide Huang, Tingnan Zhang, Wenhao Yu, Ding Zhao
-				</p> 
-				<p style="line-height:10px;font-size:14px;color: #000000">
-					L4DC 2024
-				</p> 
-				<p style="line-height:20px;font-size:14px;color: #777777">
-					TL;DR: We introduce GradS, a gradient-based method for improving training efficiency in multi-constraint RL by manipulating gradients, optimizing both reward and constraint satisfaction.
-				</p> 
-				<p style="line-height:10px;font-size:14px;color: #777777">
+				</p>
+				<p style="line-height:20px;font-size:14px;color: #000000;margin-bottom:6px;">
+					L4DC 2024 &nbsp;&middot;&nbsp;
 					<a href="https://proceedings.mlr.press/v242/yao24a/yao24a.pdf" target="_blank">Paper</a> /
 					<a href="https://sites.google.com/view/mc-grads/home" target="_blank">Website</a> /
 					<a href="https://github.com/yihangyao/GradS" target="_blank">Code</a>
+				</p>
+				<p class="project-organization">
+					<span>Collaboration with Google DeepMind</span>
+					<img class="organization-logo" src="./static/organization/GDM_logo.png" alt="Google DeepMind">
+				</p>
+				<div class="topic-tags" aria-label="Research topics">
+					<span class="topic-tag">Reinforcement Learning</span>
+					<span class="topic-tag">Multi-Objective Optimization</span>
+					<span class="topic-tag">AI Safety</span>
+				</div>
+				<p style="line-height:20px;font-size:14px;color: #777777">
+					TL;DR: We introduce GradS, a gradient-based method for improving training efficiency in multi-constraint RL by manipulating gradients, optimizing both reward and constraint satisfaction.
 				</p>
 			</div>
 		</div>
@@ -430,18 +527,25 @@
 			</div>
 			<div class="col-md-9" style="padding-top:30px">  
 				<h5><font color="#000000"><div style="line-height:20px; font-size:18px;">Constraint-Conditioned Policy Optimization for Versatile Safe Reinforcement Learning</div></font></h5>
-				<p style="line-height:20px;font-size:14px;">
+				<p style="line-height:20px;font-size:14px;margin-bottom:4px;">
 					<span style="color: #000000"><strong>Yihang Yao</strong></span>*, Zuxin Liu*, 
 					Zhepeng Cen, Jiacheng Zhu, Wenhao Yu, Tingnan Zhang, Ding Zhao
-				</p> 
-				<p style="line-height:10px;font-size:14px;color: #000000">
-					NeurIPS 2023
-				</p> 
+				</p>
+				<p style="line-height:20px;font-size:14px;color: #000000;margin-bottom:6px;">
+					NeurIPS 2023 &nbsp;&middot;&nbsp;
+					<a href="https://arxiv.org/abs/2310.03718" target="_blank">Paper</a>
+				</p>
+				<p class="project-organization">
+					<span>Collaboration with Google DeepMind</span>
+					<img class="organization-logo" src="./static/organization/GDM_logo.png" alt="Google DeepMind">
+				</p>
+				<div class="topic-tags" aria-label="Research topics">
+					<span class="topic-tag">Reinforcement Learning</span>
+					<span class="topic-tag">Multi-Objective Optimization</span>
+					<span class="topic-tag">AI Safety</span>
+				</div>
 				<p style="line-height:20px;font-size:14px;color: #777777">
 					TL;DR: We introduce CCPO, a framework for versatile/adaptive safe RL that enables efficient training and zero-shot adaptation to varying safety constraints.
-				</p> 
-				<p style="line-height:10px;font-size:14px;color: #777777">
-					<a href="https://arxiv.org/abs/2310.03718" target="_blank">Paper</a> 
 				</p>
 			</div>
 		</div>
@@ -529,7 +633,7 @@
 		 -->
 
 
-		<div class="row">
+		<div class="row" hidden>
 			<div id="CDT" class="col-md-3">
 				<a>
 					<img class="img-responsive" src="./static/publication/CDT_new.png" width="250px" height="140px" style="padding-top:40px">
